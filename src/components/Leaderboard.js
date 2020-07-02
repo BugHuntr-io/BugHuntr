@@ -1,9 +1,10 @@
 import React from 'react';
-import Context from '../../Context.js';
+// import Context from '../../Context.js';
 
 export default function Leaderboard() {
   return (
     <div id="leaderboard">
+      <h3>Leaderboard</h3>
       <ul>
         <li>
           user 1
