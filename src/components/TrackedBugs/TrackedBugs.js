@@ -30,7 +30,7 @@ export default function TrackedBugs() {
           </li>
         )
       });
-    return bugList;
+      return bugList;
     }
     
     else {
