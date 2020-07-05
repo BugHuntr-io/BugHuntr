@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Leaderboard from './Leaderboard';
+import Leaderboard from '../Leaderboard/Leaderboard';
 
 export default function SideBar(props) {
   return (

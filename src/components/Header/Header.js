@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInfo from './UserInfo.js';
+import UserInfo from '../UserInfo/UserInfo';
 
 export default function Header() {
   return (
