@@ -6,7 +6,7 @@ export default function BugListDisplay() {
   const context = useContext(Context);
 
   function renderBugPosts() {
-    const listOfBugs = context.bugs.map(bug => {
+    const listOfBugs = context.state.bugs.map(bug => {
       return (
         <li
           key={bug.id}
