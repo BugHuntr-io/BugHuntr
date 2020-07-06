@@ -11,16 +11,16 @@ export default class App extends Component {
   static contextType = Context;
 
   state = {
-    bugs : Store.bugs,
-    currentUser : Store.users[0]
-    }
+    bugs: Store.bugs,
+    currentUser: Store.users[0]
+  }
 
   removeTrackedBug = (bugId) => {
     const updatedUser = this.state.currentUser;
     updatedUser.bugsWorkingOn = updatedUser.bugsWorkingOn.filter(id => id !== bugId)
 
     this.setState({
-      currentUser : updatedUser
+      currentUser: updatedUser
     })
   }
 
@@ -28,8 +28,8 @@ export default class App extends Component {
 
     return (
       <Context.Provider value={{
-        state : this.state,
-        removeTrackedBug : this.removeTrackedBug
+        state: this.state,
+        removeTrackedBug: this.removeTrackedBug
 
       }}>
         <main className="App">

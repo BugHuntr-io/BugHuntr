@@ -6,7 +6,7 @@ export default function BugPost(props) {
   };
 
   return (
-    <div className="bug-post">
+    <div className="bug-post force-row">
       <img className="bug-post-image" src="" alt="" />
       <div className="bug-post-content">
         <h3 className="bug-post-title">{props.bug.title}</h3>

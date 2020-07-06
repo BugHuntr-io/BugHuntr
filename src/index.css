@@ -42,8 +42,17 @@
   flex: 5;
 }
 
+.bug-post{
+  border: solid 1px;
+  padding: 10px;
+}
+
 .side-bar{
   flex: 1;
   border: solid 1px;
   padding: 10px;
+}
+
+ul{
+  list-style: none;
 }
