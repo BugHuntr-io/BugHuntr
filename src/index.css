@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 .force-row{
   display: flex;
   flex-direction: row;
@@ -55,4 +57,13 @@
 
 ul{
   list-style: none;
+}
+
+.bug-post-button{
+  background-color: #fff;
+  border: solid;
+  color: #000;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  padding: 8px;
 }

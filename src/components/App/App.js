@@ -13,6 +13,7 @@ export default class App extends Component {
   state = {
     bugs: Store.bugs,
     currentUser: Store.users[0]
+
   }
 
   removeTrackedBug = (bugId) => {
@@ -24,12 +25,27 @@ export default class App extends Component {
     })
   }
 
+  pursueBug = (bugId) => {
+    const updatedUser = this.state.currentUser;
+    const clickedBug = this.state.bugs.find(bug => bug.id === bugId)
+    if (!updatedUser.bugsWorkingOn.includes(clickedBug.id)) {
+      updatedUser.bugsWorkingOn.push(clickedBug.id)
+
+      this.setState({
+        currentUser: updatedUser
+      })
+    } else {
+      alert('You are already tracking this bug!');
+    }
+  }
+
   render() {
 
     return (
       <Context.Provider value={{
         state: this.state,
-        removeTrackedBug: this.removeTrackedBug
+        removeTrackedBug: this.removeTrackedBug,
+        pursueBug: this.pursueBug
 
       }}>
         <main className="App">
