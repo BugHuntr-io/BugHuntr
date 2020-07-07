@@ -117,19 +117,20 @@ const attempts = [
 
 const users = [
   {
-    id : 1,
-    name : 'Nick',
-    password : 'Thorpe',
-    email : 'thicknorpe@gmail.com',
-    experience : 1,
-    avatar : null,
-    profilePic : null,
-    myBugs : null,
-    bugsWorkingOn : ['34513467sdfgsdf7s8dfg1', '34513467sdfgsdf7s8dfg2', '34513467sdfgsdf7s8dfg3'],
-    solvedBugs : null,
-    loggedIn : true,
-    flagLevel : 0,
-    activityLevel : 3
+    id: 1,
+    name: 'Nick',
+    password: 'Thorpe',
+    email: 'thicknorpe@gmail.com',
+    experience: 1,
+    avatar: null,
+    profilePic: null,
+    myBugs: null,
+    bugsWorkingOn: ['34513467sdfgsdf7s8dfg1', '34513467sdfgsdf7s8dfg2', '34513467sdfgsdf7s8dfg3'],
+    createdBugs: ['34513467sdfgsdf7s8dfg4'],
+    solvedBugs: null,
+    loggedIn: true,
+    flagLevel: 0,
+    activityLevel: 3
   }
 ]
 

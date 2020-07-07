@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
 import MainView from '../MainView/MainView';
 import TrackedBugs from '../TrackedBugs/TrackedBugs';
+import BugPostExpanded from '../BugPostExpanded/BugPostExpanded';
 
 export default class App extends Component {
   static contextType = Context;
@@ -57,6 +58,9 @@ export default class App extends Component {
           <Route exact path="/tracked-bugs">
             <TrackedBugs />
           </Route>
+          <Route
+            path="/bug-post-expanded/:bugId"
+            component={BugPostExpanded} />
         </main>
       </Context.Provider>
     );

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import BugPost from '../BugPost/BugPost';
 import Context from '../../Context';
-import giveUpButton from '../../images/give-up-button.png';
 
 export default function TrackedBugs() {
   const context = useContext(Context);
