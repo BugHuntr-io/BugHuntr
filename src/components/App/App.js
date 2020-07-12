@@ -15,6 +15,8 @@ export default class App extends Component {
   state = {
     bugs: Store.bugs,
     currentUser: Store.users[0],
+    displayedBugs: [],
+    currentPage: 1
   }
 
   removeTrackedBug = (bugId) => {
@@ -41,14 +43,27 @@ export default class App extends Component {
   }
 
   postNewBounty = (newBug) => {
-    console.log(newBug);
     const requestOptions = {
       method: 'POST',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer 30f6f081-6829-472b-bc08-c556a924490a'
       },
       body: JSON.stringify(newBug)
+    };
+    fetch('http://localhost:8000/bugs', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }
+
+  getStore = () => {
+    console.log('hit get store');
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer 30f6f081-6829-472b-bc08-c556a924490a'
+      }
     };
     fetch('http://localhost:8000/bugs', requestOptions)
       .then(response => response.json())
@@ -62,7 +77,8 @@ export default class App extends Component {
         state: this.state,
         removeTrackedBug: this.removeTrackedBug,
         pursueBug: this.pursueBug,
-        postNewBounty: this.postNewBounty
+        postNewBounty: this.postNewBounty,
+        getStore: this.getStore
 
       }}>
         <main className="App">
