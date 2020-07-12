@@ -7,7 +7,7 @@ export default function NavBar() {
       <div className="nav-bar force-row">
         <Link to="/" className="nav-link" id="main-tab">Main</Link>
         <Link to="/tracked-bugs" className="nav-link" id="tracked-bugs-tab">Tracked bugs</Link>
-        <a className="nav-link" id="post-bounty-tab">Post Bounty</a>
+        <Link to="/post-bounty" className="nav-link" id="post-bounty-tab">Post Bounty</Link>
         <a className="nav-link" id="my-bugs-tab">My Bugs</a>
       </div>
   )

@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import Context from '../../Context';
 import BugPost from '../BugPost/BugPost';
-import giveUpButton from '../../images/give-up-button.png';
 
 export default function BugListDisplay() {
   const context = useContext(Context);
@@ -12,11 +11,7 @@ export default function BugListDisplay() {
         <li
           key={bug.id}
         >
-          <BugPost
-            bug={bug}
-            buttonAction={context.pursueBug}
-            buttonText='Pursue'
-          />
+          <BugPost bug={bug}/>
         </li>
       )
     })

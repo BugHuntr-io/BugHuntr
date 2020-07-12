@@ -44,10 +44,13 @@ export default class App extends Component {
     console.log(newBug);
     const requestOptions = {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer 30f6f081-6829-472b-bc08-c556a924490a'
+      },
       body: JSON.stringify(newBug)
     };
-    fetch('url', requestOptions)
+    fetch('http://localhost:8000/bugs', requestOptions)
       .then(response => response.json())
       .then(data => console.log(data));
   }
