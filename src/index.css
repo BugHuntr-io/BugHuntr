@@ -67,3 +67,8 @@ ul{
   font-family: 'Raleway', sans-serif;
   padding: 8px;
 }
+
+.post-bounty-component{
+  margin: 3rem auto;
+  width: 70%;
+}

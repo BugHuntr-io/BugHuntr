@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import NavBar from '../NavBar/NavBar';
 import MainView from '../MainView/MainView';
 import TrackedBugs from '../TrackedBugs/TrackedBugs';
+import PostBounty from '../PostBounty/PostBounty';
 import BugPostExpanded from '../BugPostExpanded/BugPostExpanded';
 
 export default class App extends Component {
@@ -13,8 +14,7 @@ export default class App extends Component {
 
   state = {
     bugs: Store.bugs,
-    currentUser: Store.users[0]
-
+    currentUser: Store.users[0],
   }
 
   removeTrackedBug = (bugId) => {
@@ -40,13 +40,26 @@ export default class App extends Component {
     }
   }
 
+  postNewBounty = (newBug) => {
+    console.log(newBug);
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newBug)
+    };
+    fetch('url', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
+  }
+
   render() {
 
     return (
       <Context.Provider value={{
         state: this.state,
         removeTrackedBug: this.removeTrackedBug,
-        pursueBug: this.pursueBug
+        pursueBug: this.pursueBug,
+        postNewBounty: this.postNewBounty
 
       }}>
         <main className="App">
@@ -61,6 +74,9 @@ export default class App extends Component {
           <Route
             path="/bug-post-expanded/:bugId"
             component={BugPostExpanded} />
+          <Route exact path="/post-bounty">
+            <PostBounty />
+          </Route>
         </main>
       </Context.Provider>
     );
